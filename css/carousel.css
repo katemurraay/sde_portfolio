@@ -1,0 +1,54 @@
+.carousel {
+    position:relative;
+    width: 40vw;
+    margin-top:40px;
+    margin-bottom: 10px;
+}
+.carousel-cell {
+    width: 17.5vw;
+    height: 37vw;
+    margin-right: 90px;
+    margin-bottom:2px;
+    background: white;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+}
+
+.carousel:before {
+    content:"";
+    height: 40vw;
+    width:20vw;
+    position:absolute;
+    top:-1.5vw;
+    left:51%;
+    transform:translateX(-50%); background:url('../images/samsung_galaxy_template.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    z-index:2;
+}
+img.screen {
+    width:98%;
+  
+}
+.carousel-cell.is-selected {
+    opacity: 1;
+    transform: none;
+}
+.carousel-cell {
+    transform: scale(0.7);
+    opacity: 0;
+    transition: opacity 0.225s ease-in-out, transform 0.225s ease-in-out;
+}
+@media only screen and (max-width:500px) {
+    .carousel:before {
+    height: 80vw;
+    width: 40.8vw;
+        top: -3vw;
+    }
+    .carousel-cell {
+    width: 36vw;
+    height: 74vw;
+    margin-right:30px;
+    }
+    
+}
